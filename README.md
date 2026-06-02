@@ -10,7 +10,6 @@ Prototipo **PWA mobile-first** de Bengala (Superacció). Este repositorio contie
 ## Arranque
 
 ```bash
-cd bengala-pwa
 npm install
 npm run dev
 ```
