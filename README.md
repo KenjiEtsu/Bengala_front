@@ -17,6 +17,24 @@ npm run dev
 
 Abrir `http://localhost:3000`.
 
+## Cambiar el backend
+
+El frontend lee la URL del backend desde `NEXT_PUBLIC_API_BASE`.
+
+En local crea un archivo `.env.local` en `bengala-pwa` con:
+
+```env
+NEXT_PUBLIC_API_BASE=http://localhost:3001
+```
+
+Para Render o cualquier despliegue, cambia ese valor por la URL publica del backend:
+
+```env
+NEXT_PUBLIC_API_BASE=https://tu-backend.onrender.com
+```
+
+Ese valor lo usan todas las llamadas API del frontend, por ejemplo `src/lib/api.ts` y la pantalla de cuenta para subir o descargar documentos.
+
 ## Error: "Only secure origins are allowed"
 
 Algunas APIs (geolocalización, service worker/PWA) requieren **contexto seguro**:
